@@ -1,0 +1,22 @@
+version: '3.4'
+
+services:
+
+  web1:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Production 
+    ports:
+      - 8080:8080
+
+  web2:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Production 
+    ports:
+      - 8081:8081
+
+networks:
+  default:
+    external:
+      name: nat
+
+
