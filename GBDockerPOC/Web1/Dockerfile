@@ -10,10 +10,10 @@ COPY /Web1.csproj Web1/
 RUN dotnet restore Web1/Web1.csproj
 COPY . .
 WORKDIR /src/Web1
-RUN dotnet build Web1.csproj -c Release -o /app
+RUN dotnet build Web1.csproj -c Release -o /out
 
 FROM build AS publish
-RUN dotnet publish Web1.csproj -c Release -o /app
+RUN dotnet publish Web1.csproj -c Release -o /out
 
 FROM base AS final
 WORKDIR /app
