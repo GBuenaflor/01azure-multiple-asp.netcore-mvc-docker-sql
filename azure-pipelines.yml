@@ -24,6 +24,6 @@ stages:
       displayName: Build an image
       inputs:
         command: build
-        dockerfile: '$(Build.SourcesDirectory)/GBDockerPOC/01azure-multiple-asp.netcore-mvc-docker-sql/tree/master/GBDockerPOC/GBDockerPOC'
+        dockerfile: '**/Dockerfile'
         tags: |
           $(tag)
