@@ -6,14 +6,14 @@ EXPOSE 8080
 
 FROM microsoft/aspnetcore-build:2.0 AS build
 WORKDIR /src
-COPY /Web1.csproj Web1/
+COPY Web1/Web1.csproj Web1/
 RUN dotnet restore Web1/Web1.csproj
 COPY . .
 WORKDIR /src/Web1
-RUN dotnet build Web1.csproj -c Release -o /out
+RUN dotnet build Web1.csproj -c Release -o /app
 
 FROM build AS publish
-RUN dotnet publish Web1.csproj -c Release -o /out
+RUN dotnet publish Web1.csproj -c Release -o /app
 
 FROM base AS final
 WORKDIR /app
