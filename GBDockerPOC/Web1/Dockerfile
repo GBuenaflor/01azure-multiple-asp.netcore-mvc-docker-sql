@@ -6,7 +6,7 @@ EXPOSE 8080
 
 FROM microsoft/aspnetcore-build:2.0 AS build
 WORKDIR /src
-COPY Web1/Web1.csproj Web1/
+COPY /Web1.csproj Web1/
 RUN dotnet restore Web1/Web1.csproj
 COPY . .
 WORKDIR /src/Web1
