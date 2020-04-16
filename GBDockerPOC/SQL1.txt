@@ -2,7 +2,7 @@
 --DataBase Server : gbdockerdbserver
 --Database        : gbdockerdb
 --userName        : gbdockerdbserver
---Password        : meralco$5.
+--Password        : meralco$5..
 
 ----------------------------
 -- Create New Table
